@@ -33,29 +33,42 @@ students = [
     {'first_name': 'Mark', 'last_name': 'Guillen'},
     {'first_name': 'KB', 'last_name': 'Tonel'}
 ]
+
+
 def printDict(lists):
-    for list in range(len(lists)):
-        print('first name - ' + lists[list]['first_name'] + ' : ' + 'last name - ' + lists[list]['last_name'])
+    for list in lists:
+        print('first name - ' + list['first_name'] +
+              ' : ' + 'last name - ' + list['last_name'])
+
+
 printDict(students)
 
-# 3. Create a function that given a list of dictionaries and a key name, it outputs the value stored 
+# 3. Create a function that given a list of dictionaries and a key name, it outputs the value stored
 # in that key for each dictionary.  For example, iterateDictionary2('first_name', students) should output
+
+
 def iterateDictionary(keyVal, lists):
     for list in range(len(lists)):
         print(lists[list][keyVal])
+
+
 iterateDictionary('first_name', students)
 
 dojo = {
-   'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
-   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
-# 4. Create a function that prints the name of each location and also how many locations the Dojo 
-# currently has.  Have the function also print the name of each instructor and how many instructors 
+# 4. Create a function that prints the name of each location and also how many locations the Dojo
+# currently has.  Have the function also print the name of each instructor and how many instructors
 # the Dojo currently has.  For example, printDojoInfo(dojo) should output
+
+
 def printDojoInfo(lists):
     for key, value in dojo.items():
         print('\n')
         print(str(len(value)) + " " + key.upper())
         for ele in value:
             print(ele)
+
+
 printDojoInfo(dojo)
